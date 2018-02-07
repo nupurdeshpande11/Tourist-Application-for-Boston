@@ -1,0 +1,55 @@
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightsalmon ;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+h1
+{
+    text-align: center;
+    color: coral;
+    font-family: "Georgia";
+}
+.container
+{
+    padding:100px;
+    text-align: center;
+    color: red;
+font-size: large;
+    background-color: wheat ;
+}
+.about{
+    background: burlywood url('assets/images/tripp.jpg') no-repeat 300px 20px;
+    color: black;
+    text-align: center;
+    padding: 200px;
+    box-shadow: 5px 10px lightsalmon;
+    font-family: "Calibri";
+    margin: 0px;
+    font-size:large;
+
+}
+
+ul.topnav li a:hover:not(.active) {background-color: wheat;}
+
+ul.topnav li a.active {background-color: lightsalmon;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {text-align: center;
+        float: left;}
+}

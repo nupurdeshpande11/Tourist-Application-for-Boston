@@ -1,0 +1,68 @@
+<!--<app-navbar></app-navbar>
+<table class="table table-bordered">
+  <thead>
+      <input [(ngModel)]="searchText" placeholder="Search by TripName">
+  <tr>
+    <td (click)="sort('name')">Trip Name</td>
+    <td (click)="sort('location')">Location</td>
+    <td (click)="sort('details')">Trip Details</td>
+    <td (click)="sort('budget')">Budget</td>
+    <td width="275" align="center">Action</td>
+  </tr>
+  </thead>-->
+     <!--| trip: searchText | orderBy: key : reverse ; let i = index-->
+  <!--<tbody>
+   <tr  *ngFor="let trip of trips | trip: searchText | orderBy: key : reverse ">-->
+     <!--<td>{{ i }}</td>-->
+   <!-- <td>{{trip.name}}</td>
+    <td>{{trip.location}}</td>
+    <td>{{trip.details}}</td>
+    <td>{{trip.budget}}</td>
+    <td width="275"> 
+      <a class="btn btn-info" routerLink="/showitinerary/{{trip._id}}">Detail</a> 
+      <a class="btn btn-success" routerLink="/edit-itinerary/{{trip._id}}" routerLinkActive="active">Edit</a>
+      <a class="btn btn-danger" (click)="deleteTrip(trip._id)">Delete</a>
+    </td>
+   </tr>
+  </tbody>
+</table>
+<div class="container">
+<h6 class="well">
+    Start Planning Your Trip Now !!
+	</h6>
+</div>-->
+<div><app-navbar></app-navbar></div>
+<div>
+   
+<input type="text" [(ngModel)]="searchText" placeholder="Search by TripName">
+</div>
+  <div>
+    <table class=" table table-bordered"> 
+      <thead class="thead">
+         
+        <tr>
+          <td (click)="sort('name')">Trip Name</td>
+          <td (click)="sort('location')">Location</td>
+          <td (click)="sort('details')">Trip Details</td>
+          <td (click)="sort('budget')">Budget</td>
+          <td width="200" align="center">Action</td>
+        </tr>
+      </thead>
+    
+      <tbody class="tbody">
+        <tr *ngFor="let trip of trips | trip: searchText | orderBy: key : reverse ; let i = index">
+          <!--<td>{{ i }}</td>-->
+          <td>{{trip.name}}</td>
+          <td>{{trip.location}}</td>
+          <td>{{trip.details}}</td>
+          <td>{{trip.budget}}</td>
+          <td width="275">
+            <a id=file class="glyphicon glyphicon-file" routerLink="/show/{{trip._id}}"></a>
+            <a id=edit class="glyphicon glyphicon-edit " routerLink="/edit/{{trip._id}}"></a>
+            <a id=trash class="glyphicon glyphicon-trash" (click)="deleteTrip(trip._id)"></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
